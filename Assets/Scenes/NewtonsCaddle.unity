@@ -317,10 +317,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592172791}
-  - component: {fileID: 1592172793}
   - component: {fileID: 1592172792}
   m_Layer: 0
-  m_Name: PhysicManager
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,29 +349,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1592172789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f48183089ac7f49b76a9feab28bb6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 56efa7266e1454547b49aa3be97746c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dt: 0.01
-  itersPerFrame: 10
-  collisionIters: 3
-  boneIters: 5
-  friction: 0.99
-  gravity: {x: 0, y: -9.81, z: 0}
-  saveConfigName: scene.json
---- !u!114 &1592172793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592172789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f147586e3e1f34ba844cfac330c291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  physics: {fileID: 1592172792}
+  numPendulums: 2
+  stickLength: 3
+  radius: 0.6
+  gapDistance: 0.1
+  startAngle: -45
+  gravity: 9.81
+  elasticity: 1
+  damping: 0.15
+  pendulums: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
