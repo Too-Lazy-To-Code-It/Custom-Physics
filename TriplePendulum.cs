@@ -1,7 +1,6 @@
 using UnityEngine;
 public class TriplePendulum : MonoBehaviour
 {
-    // Paramètres physiques
     public float l1 = 1.0f, l2 = 1.0f, l3 = 1.0f; // Longueurs des pendules
     public float m1 = 1.0f, m2 = 1.0f, m3 = 1.0f; // Masses des pendules
     public float g = 9.81f; // Gravité
@@ -62,19 +61,14 @@ public class TriplePendulum : MonoBehaviour
                        * (omega1 * omega1 * l1 * (m1 + m2) + g * (m1 + m2) * Mathf.Cos(theta1)
                        + omega2 * omega2 * l2 * m2 * Mathf.Cos(theta1 - theta2));
 
-        // Ajuster l'alpha pour le 3ème pendule (ajoutez le calcul de l'accélération de la masse 3 si nécessaire)
+        // Ajuster l'alpha pour le 3ème pendule 
         float alpha3 = -g * Mathf.Sin(theta3);   // Calcul de l'accélération pour le troisième pendule
 
         omega1 += alpha1 * dt;
         omega2 += alpha2 * dt;
         omega3 += alpha3 * dt;
 
-        //// Ajustement pour que les angles des pendules convergent vers un alignement
-        //if (Mathf.Abs(theta1 - theta2) < 0.01f && Mathf.Abs(theta2 - theta3) < 0.01f)
-        //{
-        //    // Ajuster les angles pour les rendre alignés
-        //    theta1 = theta2 = theta3;
-        //}
+
 
         // Mettre à jour les angles
         theta1 += omega1 * dt;
