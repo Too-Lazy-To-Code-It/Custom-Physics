@@ -64,7 +64,6 @@ namespace SimpleUnityPhysics
         [HideInInspector]
         public float radius = 1.0f;
 
-        // See https://en.wikipedia.org/wiki/Vector_projection
 
         public static void Normalize(float x, float y, float z, out float nx, out float ny, out float nz)
         {
